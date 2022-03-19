@@ -4,9 +4,9 @@
 
 ## Prerequisites
 
-### Python
+### 1. Python
 
-### Python packages:
+### 2. Python packages:
 
 ~~~Bash
 $ pip install pandas
@@ -32,6 +32,8 @@ $ pip install unidecode
 $ python ImportCSV.py
 ~~~
 
+### 5. Wait for the script execution to end.
+
 ### Congratulations, your Oracle db table is ready!
 
 ## ImportCSV with input file
@@ -51,5 +53,7 @@ $ python ImportCSV_Input.py
 ### 4. Insert the variables in terminal.
 
 ![Variables Input](./Assets/variables_input.png)
+
+### 5. Wait for the script execution to end.
 
 ### Congratulations, your Oracle db table is ready!
