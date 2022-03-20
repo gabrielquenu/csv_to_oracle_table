@@ -58,4 +58,6 @@ $ python ImportCSV_Input.py
 
 ### 🎉 Congratulations, your Oracle db table is ready!
 
-<h1 style="test-align:center">💎</h1>
+<p align="center">
+  <img alt="End" src="./Assets/gem.png">
+</p>  
