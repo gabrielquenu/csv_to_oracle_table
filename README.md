@@ -58,6 +58,39 @@ $ python ImportCSV_Input.py
 
 ### 🎉 Congratulations, your Oracle db table is ready!
 
+## 🛠️ ImportCSV with exec file for Windows
+
+### 1. 📥 Download the ImportCSV_GUI.exe file.
+
+<a href="https://github.com/gabrielquenu/csv_to_oracle_table/releases/download/Release/ImportCSV_GUI.exe"><img alt="ImportCSV_GUI.exe Download" src="./Assets/ImportCSV_GUI_exe.png"></a>
+
+### 2. ⚙️ Double click on ImportCSV_GUI.exe file.
+
+### 3. 📝 Insert the variables in GUI.
+
+![Variables GUI](./Assets/GUI.png)
+
+### 4. ⏳ Wait for the script execution to end.
+
+### 🎉 Congratulations, your Oracle db table is ready!
+
+## 🛠️ ImportCSV with exec file for Linux
+
+### 1. 📥 Download the ImportCSV_GUI file.
+
+<a href="https://github.com/gabrielquenu/csv_to_oracle_table/releases/download/Release/ImportCSV_GUI"><img alt="ImportCSV_GUI Download" src="./Assets/ImportCSV_GUI.png"></a>
+
+### 2. ⚙️ Double click on ImportCSV_GUI file.
+
+### 3. 📝 Insert the variables in GUI.
+
+![Variables GUI](./Assets/GUI.png)
+
+### 4. ⏳ Wait for the script execution to end.
+
+### 🎉 Congratulations, your Oracle db table is ready!
+
+
 <p align="center">
   <img alt="End" src="./Assets/gem.png">
 </p>  
