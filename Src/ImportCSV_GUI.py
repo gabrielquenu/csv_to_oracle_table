@@ -1,4 +1,5 @@
 import pandas as pd
+from detect_delimiter import detect
 import cx_Oracle
 import unidecode
 
@@ -19,16 +20,16 @@ class Converter():
 
         cursor = conn.cursor()
 
-        # FORMAT CSV FILE
-        CSVHandler.format_csv(csv_file)
-        formatted_csv_file = '{}_formatted.csv'.format(
-            csv_file[:-4])
+        # DETECT CSV DELIMITER
+        file = open(csv_file, 'r')
+        CSVDelimiter = detect(file.readline(), whitelist=[',', ';'])
+        file.close()
 
         # READ CSV
         CSVData = ''
 
-        CSVData = pd.read_csv(formatted_csv_file,
-                              encoding='iso8859-1', delimiter='!@#')
+        CSVData = pd.read_csv(csv_file,
+                              encoding='iso8859-1', delimiter=CSVDelimiter)
 
         CSVData = CSVData.fillna('NULL')
 
@@ -84,36 +85,12 @@ class Converter():
             '''.format(table, columnsInsert, rowData))
             conn.commit()
 
-        # REMOVE FORMATTED CSV
-        try:
-            os.remove(formatted_csv_file)
-        except OSError as error:
-            print("Failed with:", error.strerror)
-            print("Error code:", error.code)
-
         # CLOSE DB CONNECTION
         conn.close()
 
         success = Success()
         success.Label()
         success.mainloop()
-
-
-class CSVHandler():
-    def format_csv(file_name):
-        csv_file = open(file_name, 'r', encoding='iso8859-1')
-        data = csv_file.read().replace(';', '!@#').replace('"',
-                                                           '').replace("'", '').replace('!@#\n', '\n')
-        csv_file.close()
-
-        csv_file = open('{}_formatted.csv'.format(file_name[:-4]), 'w')
-        csv_file.write(data)
-        csv_file.close()
-
-        new_file_name = '{}_formatted.csv'.format(
-            file_name[:-4])
-
-        return new_file_name
 
 
 class Main(Tk):
